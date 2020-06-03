@@ -26,9 +26,9 @@ jobs:
       with:
         node-version: 12
     - name: Install Surge
-      run: sudo npm install -g surge
-    - name: Run Surge
-      run: surge -/ kevin_pollock2.surge.sh --token ${{Secrets.SURGE_TOKEN}}
+      run: npm install -g surge
+    - name: Run surge
+      run: surge ./ kevin_pollock2.surge.sh --token ${{ Secrets.SURGE_TOKEN }}
       
                    
       
